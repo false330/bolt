@@ -30,7 +30,6 @@ input, button, textarea, select {
 }
 
 .bolt__wrap {
-  width: 100%;
   position: relative;
 }
 
@@ -47,7 +46,7 @@ input, button, textarea, select {
 
 .bolt__header-inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -73,12 +72,8 @@ input, button, textarea, select {
 }
 
 .bolt__theme {
-  width: 100%;
   background-color: #f2f2f2;
   text-align: center;
-}
-
-.bolt__theme-inner {
   padding: 250px 0;
 }
 
@@ -86,7 +81,7 @@ input, button, textarea, select {
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .bolt__theme-lead {
@@ -95,7 +90,6 @@ input, button, textarea, select {
 }
 
 .bolt__media {
-  width: 100%;
   background-color: #74cfae;
 }
 
@@ -115,7 +109,7 @@ input, button, textarea, select {
 .bolt__media-text-title {
   font-size: 24px;
   color: #fff;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 .bolt__media-text-content {
@@ -123,20 +117,20 @@ input, button, textarea, select {
 }
 
 .bolt__gallery {
-  width: 100%;
   background-color: #f2f2f2;
   text-align: center;
   padding-top: 60px;
+  padding-bottom: 70px;
 }
 
 .bolt__gallery-title {
+  margin-bottom: 40px;
   font-size: 24px;
   color: #333;
 }
 
 .bolt__gallery-grid {
-  padding-top: 40px;
-  padding-bottom: 90px;
+  margin-bottom: 90px;
   display: flex;
   flex-wrap: wrap;
   }
@@ -148,7 +142,7 @@ input, button, textarea, select {
   transition: 0.3s;
 }
 
-.bolt__gallery-grid > a:nth-child(3n) {
+.bolt__gallery-img:nth-child(3n) {
   margin-right: 0px;
 }
 
@@ -164,7 +158,6 @@ input, button, textarea, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 70px;
 }
 
 .bolt__gallery-form-text {
@@ -188,7 +181,6 @@ input, button, textarea, select {
 }
 
 .bolt__status {
-  width: 100%;
   background-color: #4e4e4e;
   text-align: center;
   padding-top: 70px;
@@ -222,15 +214,14 @@ input, button, textarea, select {
 }
 
 .bolt__nav {
-  width: 100%;
   background-color: #f2f2f2;
+  padding: 200px 0 ;
 }
 
 .bolt__nav-inner {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 0 200px;
 }
 
 .bolt__nav-icon {
@@ -251,7 +242,6 @@ input, button, textarea, select {
 }
 
 .bolt__footer {
-  width: 100%;
   background-color: #74cfae;
   padding: 20px 0 25px;
 }
