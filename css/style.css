@@ -4,9 +4,6 @@
   clear: both;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
-
 input, button, textarea, select {
   margin: 0;
   padding: 0;
@@ -27,6 +24,11 @@ input, button, textarea, select {
   font-family: 'Lato', sans-erif;
 }
 
+.bolt__common-inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+
 .bolt__wrap {
   width: 100%;
   position: relative;
@@ -34,9 +36,7 @@ input, button, textarea, select {
 
 .bolt__header {
   position: fixed;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   width:100%;
@@ -45,42 +45,51 @@ input, button, textarea, select {
   z-index: 3;
 }
 
-.volt__header-icon-color {
-  color: #333;
-  transition-duration: 0.3s;
+.bolt__header-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.volt__header-icon-color:hover {
+.bolt__header-icon-color {
   color: #333;
 }
 
 .bolt__header-button {
   padding: 14px 12px;
   background-color: #74cfae;
-  cursor: pointer;
-}
-
-.button__contact {
   font-size: 12px;
   color: #fff;
-  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.bolt__header-button:hover {
+  color: #333;
 }
 
 .bolt__main {
+  margin-top: 78px;
+}
+
+.bolt__theme {
   width: 100%;
   background-color: #f2f2f2;
   text-align: center;
+}
+
+.bolt__theme-inner {
   padding: 250px 0;
 }
 
-.bolt__main-title {
+.bolt__theme-title {
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.bolt__main-lead {
+.bolt__theme-lead {
   font-size: 30px;
   color: #c0c0c0;
 }
@@ -91,15 +100,10 @@ input, button, textarea, select {
 }
 
 .bolt__media-inner {
-  width: 1100px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.bolt__media-figure {
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .bolt__media-text {
@@ -110,75 +114,76 @@ input, button, textarea, select {
 
 .bolt__media-text-title {
   font-size: 24px;
-  margin-bottom: 35px;
   color: #fff;
+  padding-bottom: 35px;
 }
 
 .bolt__media-text-content {
   font-size: 20px;
 }
 
-.bolt__article {
+.bolt__gallery {
+  width: 100%;
   background-color: #f2f2f2;
   text-align: center;
   padding-top: 60px;
 }
 
-.bolt__article-inner {
-  width: 1100px;
-  margin: 0 auto;
-}
-
-.bolt__article-title {
+.bolt__gallery-title {
   font-size: 24px;
   color: #333;
-  margin-bottom: 40px;
 }
 
-.bolt__article-grid {
-  margin-bottom: -80px;
+.bolt__gallery-grid {
+  padding-top: 40px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-wrap: wrap;
   }
 
-.bolt__article-figure {
-  margin-right: 100px;
+.bolt__gallery-img {
   margin-bottom: 80px;
+  margin-right: 100px;
   opacity: 0.7;
   transition: 0.3s;
 }
 
-.bolt__article-figure:nth-child(3) , .bolt__article-figure:nth-child(6) {
+.bolt__gallery-grid > a:nth-child(3n) {
   margin-right: 0px;
 }
 
-.bolt__article-figure:hover {
+.bolt__gallery-img:nth-last-child(-n+3) {
+  margin-bottom: 0px;
+}
+
+.bolt__gallery-img:hover {
   opacity: 1;
 }
 
-.bolt__article-form {
+.bolt__gallery-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 90px 0 70px
+  padding-bottom: 70px;
 }
 
-.bolt__article-form-text {
+.bolt__gallery-form-text {
   font-size: 20px;
   width: 40%;
   margin-right: 90px;
   color: #333;
 }
 
-.bolt__article-form-button {
+.bolt__gallery-form-button {
   background-color: #74cfae;
   padding: 14px 20px;
-}
-
-.bolt__article-form-value {
+  font-size: 12px;
   color: #fff;
   transition: 0.3s;
+  text-decoration: none;
 }
 
-.bolt__article-form-button:hover > .bolt__article-form-value {
+.bolt__gallery-form-button:hover {
   color: #333;
 }
 
@@ -188,11 +193,6 @@ input, button, textarea, select {
   text-align: center;
   padding-top: 70px;
   padding-bottom: 100px;
-}
-
-.bolt__status-inner {
-  width: 1100px;
-  margin: 0 auto;
 }
 
 .bolt__status-title {
@@ -207,11 +207,11 @@ input, button, textarea, select {
   align-items: center;
 }
 
-.bolt__status-figure {
+.bolt__status-img {
   margin-right: 180px;
 }
 
-.bolt__status-figure:last-child {
+.bolt__status-img:last-child {
   margin-right: 0px;
 }
 
@@ -234,13 +234,11 @@ input, button, textarea, select {
 }
 
 .bolt__nav-icon {
-  width: 1100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 185px;
-  height: 100px;
-  cursor: pointer;
+  padding: 25px 0 ;
   transition-duration: 0.3s;
 }
 
@@ -252,27 +250,40 @@ input, button, textarea, select {
   color: #74cfae;
 }
 
-.volt__footer {
+.bolt__footer {
+  width: 100%;
   background-color: #74cfae;
   padding: 20px 0 25px;
 }
 
-.volt__footer-rigth {
-  width: 50%;
-  margin-left: 50%;
-}
-
-.volt__footer-item {
-  text-align: center;
+.bolt__footer-item {
+  text-align: right;
   color: #fff;
 }
 /*
 @media screen and (min-width: 767px) and (max-width: 1199px){
-  .bolt__media {
+
+  .bolt__common-inner {
+    width: 97%;
+  }
+
+  .bolt__media-inner {
+    flex-direction: column;
+  }
+
+  .bolt__media-text {
+
+  }
+
+  .bolt__gallery-grid {
+    flex-direction: column;
+  }
+
+  .bolt__status-graph {
     flex-direction: column;
   }
 }
 
 @media screen and (min-width: 766px){
   
-}
+}*/
