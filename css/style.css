@@ -6,6 +6,7 @@
 
 img {
   vertical-align: bottom;
+  max-width: 100%;
 }
 
 input, button, textarea, select {
@@ -99,6 +100,10 @@ input, button, textarea, select {
   font-weight: 700;
   color: #74cfae;
   margin-bottom: 20px;
+}
+
+.bolt__theme-title-space {
+  display: none;
 }
 
 .bolt__theme-lead {
@@ -242,9 +247,7 @@ input, button, textarea, select {
 }
 
 .bolt__nav-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   width: 185px;
   padding: 25px 0 ;
   transition-duration: 0.3s;
@@ -270,6 +273,10 @@ input, button, textarea, select {
 
 @media screen and (max-width: 1199px){
 
+.bolt__theme-title-space {
+  display: inline;
+}
+
   .bolt__common-inner {
     width: 97%;
   }
@@ -283,19 +290,26 @@ input, button, textarea, select {
   }
 
   .bolt__media-img {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .bolt__gallery-grid {
+    display: flex;
     flex-direction: column;
-    margin-bottom: 0px;
+    margin-bottom: 80px;
   }
 
   .bolt__gallery-img {
-    margin: 0px;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
   }
 
   .bolt__gallery-img:nth-child(3n) {
+    margin-right: auto;
+  }
+
+  .bolt__gallery-img:nth-child(3) {
     margin-bottom: 80px;
 }
 
@@ -337,7 +351,7 @@ input, button, textarea, select {
     border-radius: 4px;
   }
 
-  .bolt__hamburger-button-color {
+  .bolt__hamburger-button-icon {
     color: #ddd;
   }
 
