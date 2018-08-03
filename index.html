@@ -19,8 +19,14 @@
       <header class="bolt__header">
         <div class="bolt__header-inner bolt__common-inner">
           <p><i class="fas fa-bolt fa-3x bolt__header-icon-color"></i></p>
+          <button type="button" class="bolt__hamburger" onclick="hamburgerFunc()">
+            <i class="fas fa-bars fa-3x bolt__hamburger-button-color"></i>
+          </button>
           <a class="bolt__header-button" href="">Contact</a>
         </div>
+        <nav class="bolt__hamburger-nav hbClose" id="bolt__hamburger-menu">
+          <a class="bolt__hamburger-button" href="">Contact</a>
+        </nav>
       </header>
       <main class="bolt__main">
         <section class="bolt__theme">
@@ -31,7 +37,7 @@
         </section>
         <article class="bolt__media">
           <div class="bolt__media-inner bolt__common-inner">
-            <img src="img/iphone.png" alt="iPhone">
+            <img class="bolt__media-img" src="img/iphone.png" alt="iPhone">
             <div class="bolt__media-text">
               <h2 class="bolt__media-text-title font-Raleway">WHAT WE CAN DO?</h2>
               <p class="bolt__media-text-content font-Lato">Lorem lpsum is simply dummy text of the printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
